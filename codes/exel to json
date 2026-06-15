@@ -1,0 +1,48 @@
+import pandas as pd
+import json
+
+
+def excel_sheet_to_json(excel_path, sheet_name, json_path):
+    """
+    Convert one Excel sheet to a JSON file.
+
+    Parameters:
+        excel_path (str): Full path of the Excel file
+        sheet_name (str): Name of the Excel sheet to convert
+        json_path (str): Full path where JSON file will be saved
+    """
+
+    try:
+        # Read the selected Excel sheet
+        df = pd.read_excel(excel_path, sheet_name=sheet_name)
+
+        # Replace NaN values with None so JSON uses null
+        df = df.where(pd.notnull(df), None)
+
+        # Convert Excel rows to list of dictionaries
+        data = df.to_dict(orient="records")
+
+        # Save as JSON
+        with open(json_path, "w", encoding="utf-8") as json_file:
+            json.dump(data, json_file, indent=4, ensure_ascii=False)
+
+        print(f"Successfully converted sheet '{sheet_name}' to JSON.")
+        print(f"JSON saved at: {json_path}")
+
+    except FileNotFoundError:
+        print("Error: Excel file not found. Please check the file path.")
+
+    except ValueError:
+        print("Error: Sheet name not found. Please check the sheet name.")
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+
+if __name__ == "__main__":
+
+    excel_path = r"C:\Users\Ankit\Desktop\data.xlsx"
+    sheet_name = "Sheet1"
+    json_path = r"C:\Users\Ankit\Desktop\data.json"
+
+    excel_sheet_to_json(excel_path, sheet_name, json_path)
