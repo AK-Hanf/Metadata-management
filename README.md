@@ -1,4 +1,4 @@
-# Codes for File Conversion
+# Metadata Management
 
 Python codes for converting Excel and text files to JSON format with comprehensive metadata insertion templates for various analysis techniques.
 
@@ -59,7 +59,7 @@ Codes-for-file-conversion/
     │   ├── XAS.xlsx                   # X-ray Absorption Spectroscopy
     │   └── XPS.xlsx                   # X-ray Photoelectron Spectroscopy
     │
-    └── Sample projects/
+    └── synthesis and testing template/
         ├── 20250515_cat synthesis.xlsx
         └── 20250515_cat test and analytics.xlsx
 ```
