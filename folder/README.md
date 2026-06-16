@@ -19,8 +19,7 @@ A comprehensive collection of 30+ Excel templates for different characterization
 - **20250515_cat synthesis.xlsx** - Synthesis data for catalyst testing (May 15, 2025)
 - **20250515_cat test and analytics.xlsx** - Analytical results and testing data for catalysts (May 15, 2025)
 
-### Utilities
-- **txt to JSON converter** - Tool for converting text format data to JSON format
+
 
 ### Metadata
 - **Metadata** - Placeholder/template for manual metadata insertion
@@ -30,8 +29,7 @@ A comprehensive collection of 30+ Excel templates for different characterization
 These templates are designed to:
 1. Standardize data collection across different analytical techniques
 2. Facilitate consistent metadata insertion for scientific datasets
-3. Enable seamless conversion of experimental data to JSON format for database integration and analysis
-4. Support research workflows in materials characterization and catalysis studies
+3. Support research workflows in materials characterization and catalysis studies
 
 ## Usage
 
